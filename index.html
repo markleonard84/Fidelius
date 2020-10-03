@@ -4,17 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Fidelius Secure Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+
     <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
+  
+  <header>
+        <h1>Fidelius Password Generator</h1>
+  </header>
+  <main>
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h4>Password Options</h4>
+        </div>
+        <div>
+          <label>Password length (between 8 - 128 characters) :</label>
+            <input type="number" min="8" max="128" value="8" id="length">
+        </div>
+        <div class="checks">
+            <label  class="label">Use upper-case letters :</label>
+            <input type="checkbox" id="upperCase" checked class="val">
+        </div>
+        <div class="checks">
+            <label  class="label">Use lower-case letters :</label>
+            <input type="checkbox" id="lowerCase" checked class="val">
+        </div>
+        <div class="checks">
+            <label  class="label">Use numbers :</label>
+            <input type="checkbox" id="numbers" checked class="val">
+        </div>
+        <div class="checks">
+            <label  class="label">Use special characters :</label>
+            <input type="checkbox" id="specialChars" checked class="val">
         </div>
         <div class="card-body">
           <textarea
@@ -29,6 +53,8 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+        
